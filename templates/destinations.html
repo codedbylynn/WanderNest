@@ -40,5 +40,366 @@
     </div>
 </nav>
 
+
+
+
+<!-- ===== HERO WITH SEARCH ===== -->
+<section class="position-relative">
+    <div class="position-relative" style="height: 420px; overflow: hidden;">
+        <img src="{% static 'images/herosection-destinations.png' %}" class="w-100 h-100" style="object-fit: cover;" alt="Mountain lake reflection">
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.25);"></div>
+        <div class="position-absolute top-50 start-50 translate-middle text-white text-center px-3" style="width: 100%; max-width: 700px;">
+            <h1 class="display-5 fw-bold mb-4">Discover Your Next Story</h1>
+            <div class="bg-white bg-opacity-75 rounded-pill p-2 d-flex align-items-center gap-2 flex-wrap justify-content-center shadow">
+                <div class="d-flex align-items-center px-3 flex-grow-1">
+                    <i class="bi bi-geo-alt text-primary me-2"></i>
+                    <input type="text" class="form-control border-0 bg-transparent shadow-none p-0" placeholder="Where to?">
+                </div>
+                <div class="vr d-none d-md-block"></div>
+                <div class="d-flex align-items-center px-3 flex-grow-1">
+                    <i class="bi bi-calendar3 text-primary me-2"></i>
+                    <input type="text" class="form-control border-0 bg-transparent shadow-none p-0" placeholder="When?">
+                </div>
+                <button class="btn btn-primary rounded-pill px-4 py-2 fw-semibold">
+                    <i class="bi bi-search me-1"></i> Search
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FILTER PILLS ===== -->
+<section class="container">
+    <div class="bg-white shadow rounded-4 p-3 d-flex gap-2 flex-wrap justify-content-center" style="margin-top: -35px; position: relative; z-index: 2;">
+        <button class="btn btn-primary rounded-pill px-4 py-2 fw-semibold">All Destinations</button>
+        <button class="btn btn-light rounded-pill px-4 py-2 fw-semibold border"><i class="bi bi-water me-1"></i> Beach</button>
+        <button class="btn btn-light rounded-pill px-4 py-2 fw-semibold border"><i class="bi bi-bicycle me-1"></i> Adventure</button>
+        <button class="btn btn-light rounded-pill px-4 py-2 fw-semibold border"><i class="bi bi-gem me-1"></i> Luxury</button>
+        <button class="btn btn-light rounded-pill px-4 py-2 fw-semibold border"><i class="bi bi-binoculars me-1"></i> Safari</button>
+        <button class="btn btn-light rounded-pill px-4 py-2 fw-semibold border"><i class="bi bi-bank me-1"></i> Culture</button>
+        <button class="btn btn-light rounded-pill px-4 py-2 fw-semibold border"><i class="bi bi-triangle me-1"></i> Mountains</button>
+    </div>
+</section>
+
+<!-- ===== DESTINATIONS GRID ===== -->
+<section class="container py-5">
+    <div class="row g-4">
+
+        {% comment %} Reusable card structure repeated for each destination. Swap placehold.co URLs for your own photos in static/images/ {% endcomment %}
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="https://placehold.co/500x350?text=Ari+Atoll" class="card-img-top" style="height:220px; object-fit:cover;" alt="Ari Atoll Resort, Maldives">
+                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.9</span>
+                </div>
+                <div class="card-body">
+                    <p class="small text-primary text-uppercase fw-semibold mb-1" style="letter-spacing:0.5px;">Maldives</p>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h5 class="card-title fw-bold">Ari Atoll Resort</h5>
+                        <div class="text-end">
+                            <span class="fw-bold text-primary">$540</span><br>
+                            <span class="small text-muted">/night</span>
+                        </div>
+                    </div>
+                    <p class="small text-muted">Experience ultimate luxury in private overwater villas surrounded by coral...</p>
+                    <a href="#" class="btn btn-outline-primary rounded-pill w-100 fw-semibold">Explore Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="https://placehold.co/500x350?text=Zermatt" class="card-img-top" style="height:220px; object-fit:cover;" alt="Zermatt Lodge, Switzerland">
+                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.8</span>
+                </div>
+                <div class="card-body">
+                    <p class="small text-primary text-uppercase fw-semibold mb-1" style="letter-spacing:0.5px;">Switzerland</p>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h5 class="card-title fw-bold">Zermatt Lodge</h5>
+                        <div class="text-end">
+                            <span class="fw-bold text-primary">$820</span><br>
+                            <span class="small text-muted">/night</span>
+                        </div>
+                    </div>
+                    <p class="small text-muted">Cozy boutique retreat with panoramic views of the iconic Matterhorn mountain.</p>
+                    <a href="#" class="btn btn-outline-primary rounded-pill w-100 fw-semibold">Explore Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="https://placehold.co/500x350?text=Kyoto" class="card-img-top" style="height:220px; object-fit:cover;" alt="Kyoto Heritage, Japan">
+                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.9</span>
+                </div>
+                <div class="card-body">
+                    <p class="small text-primary text-uppercase fw-semibold mb-1" style="letter-spacing:0.5px;">Japan</p>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h5 class="card-title fw-bold">Kyoto Heritage</h5>
+                        <div class="text-end">
+                            <span class="fw-bold text-primary">$310</span><br>
+                            <span class="small text-muted">/night</span>
+                        </div>
+                    </div>
+                    <p class="small text-muted">Immerse yourself in traditional Japanese culture and stunning seasonal...</p>
+                    <a href="#" class="btn btn-outline-primary rounded-pill w-100 fw-semibold">Explore Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="https://placehold.co/500x350?text=Serengeti" class="card-img-top" style="height:220px; object-fit:cover;" alt="Serengeti Plains, Tanzania">
+                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.7</span>
+                </div>
+                <div class="card-body">
+                    <p class="small text-primary text-uppercase fw-semibold mb-1" style="letter-spacing:0.5px;">Tanzania</p>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h5 class="card-title fw-bold">Serengeti Plains</h5>
+                        <div class="text-end">
+                            <span class="fw-bold text-primary">$1,200</span><br>
+                            <span class="small text-muted">/night</span>
+                        </div>
+                    </div>
+                    <p class="small text-muted">Unparalleled wildlife encounters in the heart of Africa's most famous savanna.</p>
+                    <a href="#" class="btn btn-outline-primary rounded-pill w-100 fw-semibold">Explore Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="https://placehold.co/500x350?text=Amalfi" class="card-img-top" style="height:220px; object-fit:cover;" alt="Amalfi Coast, Italy">
+                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.9</span>
+                </div>
+                <div class="card-body">
+                    <p class="small text-primary text-uppercase fw-semibold mb-1" style="letter-spacing:0.5px;">Italy</p>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h5 class="card-title fw-bold">Amalfi Coast</h5>
+                        <div class="text-end">
+                            <span class="fw-bold text-primary">$450</span><br>
+                            <span class="small text-muted">/night</span>
+                        </div>
+                    </div>
+                    <p class="small text-muted">Breathtaking views and charming coastal living in Italy's most picturesque region.</p>
+                    <a href="#" class="btn btn-outline-primary rounded-pill w-100 fw-semibold">Explore Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="https://placehold.co/500x350?text=Machu+Picchu" class="card-img-top" style="height:220px; object-fit:cover;" alt="Machu Picchu, Peru">
+                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.8</span>
+                </div>
+                <div class="card-body">
+                    <p class="small text-primary text-uppercase fw-semibold mb-1" style="letter-spacing:0.5px;">Peru</p>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h5 class="card-title fw-bold">Machu Picchu</h5>
+                        <div class="text-end">
+                            <span class="fw-bold text-primary">$280</span><br>
+                            <span class="small text-muted">/night</span>
+                        </div>
+                    </div>
+                    <p class="small text-muted">Trek the ancient trails of the Incas and witness one of the wonders of the world.</p>
+                    <a href="#" class="btn btn-outline-primary rounded-pill w-100 fw-semibold">Explore Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="https://placehold.co/500x350?text=Banff" class="card-img-top" style="height:220px; object-fit:cover;" alt="Banff Retreat, Canada">
+                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.9</span>
+                </div>
+                <div class="card-body">
+                    <p class="small text-primary text-uppercase fw-semibold mb-1" style="letter-spacing:0.5px;">Canada</p>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h5 class="card-title fw-bold">Banff Retreat</h5>
+                        <div class="text-end">
+                            <span class="fw-bold text-primary">$390</span><br>
+                            <span class="small text-muted">/night</span>
+                        </div>
+                    </div>
+                    <p class="small text-muted">Discover the majestic beauty of the Canadian Rockies and crystal clear lakes.</p>
+                    <a href="#" class="btn btn-outline-primary rounded-pill w-100 fw-semibold">Explore Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="https://placehold.co/500x350?text=Santorini" class="card-img-top" style="height:220px; object-fit:cover;" alt="Santorini Villas, Greece">
+                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.9</span>
+                </div>
+                <div class="card-body">
+                    <p class="small text-primary text-uppercase fw-semibold mb-1" style="letter-spacing:0.5px;">Greece</p>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h5 class="card-title fw-bold">Santorini Villas</h5>
+                        <div class="text-end">
+                            <span class="fw-bold text-primary">$610</span><br>
+                            <span class="small text-muted">/night</span>
+                        </div>
+                    </div>
+                    <p class="small text-muted">Iconic white-washed buildings and unforgettable sunsets over the Aegean...</p>
+                    <a href="#" class="btn btn-outline-primary rounded-pill w-100 fw-semibold">Explore Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="https://placehold.co/500x350?text=Wadi+Rum" class="card-img-top" style="height:220px; object-fit:cover;" alt="Wadi Rum Glamping, Jordan">
+                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.6</span>
+                </div>
+                <div class="card-body">
+                    <p class="small text-primary text-uppercase fw-semibold mb-1" style="letter-spacing:0.5px;">Jordan</p>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h5 class="card-title fw-bold">Wadi Rum Glamping</h5>
+                        <div class="text-end">
+                            <span class="fw-bold text-primary">$420</span><br>
+                            <span class="small text-muted">/night</span>
+                        </div>
+                    </div>
+                    <p class="small text-muted">Sleep under the stars in a luxury camp nestled between majestic desert cliffs.</p>
+                    <a href="#" class="btn btn-outline-primary rounded-pill w-100 fw-semibold">Explore Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="https://placehold.co/500x350?text=Lapland" class="card-img-top" style="height:220px; object-fit:cover;" alt="Lapland Igloos, Finland">
+                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.8</span>
+                </div>
+                <div class="card-body">
+                    <p class="small text-primary text-uppercase fw-semibold mb-1" style="letter-spacing:0.5px;">Finland</p>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h5 class="card-title fw-bold">Lapland Igloos</h5>
+                        <div class="text-end">
+                            <span class="fw-bold text-primary">$950</span><br>
+                            <span class="small text-muted">/night</span>
+                        </div>
+                    </div>
+                    <p class="small text-muted">Witness the magical aurora borealis from the comfort of your private glass igloo.</p>
+                    <a href="#" class="btn btn-outline-primary rounded-pill w-100 fw-semibold">Explore Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="https://placehold.co/500x350?text=Ubud" class="card-img-top" style="height:220px; object-fit:cover;" alt="Ubud Sanctuary, Indonesia">
+                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.7</span>
+                </div>
+                <div class="card-body">
+                    <p class="small text-primary text-uppercase fw-semibold mb-1" style="letter-spacing:0.5px;">Indonesia</p>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h5 class="card-title fw-bold">Ubud Sanctuary</h5>
+                        <div class="text-end">
+                            <span class="fw-bold text-primary">$260</span><br>
+                            <span class="small text-muted">/night</span>
+                        </div>
+                    </div>
+                    <p class="small text-muted">Recharge your soul in the heart of Bali's lush jungles and serene spiritual...</p>
+                    <a href="#" class="btn btn-outline-primary rounded-pill w-100 fw-semibold">Explore Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="https://placehold.co/500x350?text=Sydney" class="card-img-top" style="height:220px; object-fit:cover;" alt="Sydney Harbour, Australia">
+                    <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.8</span>
+                </div>
+                <div class="card-body">
+                    <p class="small text-primary text-uppercase fw-semibold mb-1" style="letter-spacing:0.5px;">Australia</p>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h5 class="card-title fw-bold">Sydney Harbour</h5>
+                        <div class="text-end">
+                            <span class="fw-bold text-primary">$480</span><br>
+                            <span class="small text-muted">/night</span>
+                        </div>
+                    </div>
+                    <p class="small text-muted">Experience the vibrant life of one of the world's most beautiful harbour cities.</p>
+                    <a href="#" class="btn btn-outline-primary rounded-pill w-100 fw-semibold">Explore Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== PAGINATION ===== -->
+    <nav class="d-flex justify-content-center mt-5">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link rounded-circle mx-1" href="#"><i class="bi bi-chevron-left"></i></a></li>
+            <li class="page-item active"><a class="page-link rounded-circle mx-1 bg-primary border-primary" href="#">1</a></li>
+            <li class="page-item"><a class="page-link rounded-circle mx-1" href="#">2</a></li>
+            <li class="page-item"><a class="page-link rounded-circle mx-1" href="#">3</a></li>
+            <li class="page-item disabled"><span class="page-link border-0">...</span></li>
+            <li class="page-item"><a class="page-link rounded-circle mx-1" href="#">8</a></li>
+            <li class="page-item"><a class="page-link rounded-circle mx-1" href="#"><i class="bi bi-chevron-right"></i></a></li>
+        </ul>
+    </nav>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-dark text-light pt-5 pb-3 mt-3">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <h5 class="fw-bold">WanderNest</h5>
+                <p class="small text-secondary">Curating the world's most extraordinary travel experiences for the discerning explorer. Since 2012.</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-light"><i class="bi bi-share"></i></a>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <h6 class="fw-bold">Explore</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="{% url 'home' %}" class="text-secondary text-decoration-none">Home</a></li>
+                    <li><a href="{% url 'destinations' %}" class="text-light text-decoration-none fw-semibold">Destinations</a></li>
+                    <li><a href="{% url 'about' %}" class="text-secondary text-decoration-none">About</a></li>
+                    <li><a href="{% url 'contact' %}" class="text-secondary text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h6 class="fw-bold">Categories</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="#" class="text-secondary text-decoration-none">Adventure</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none">Luxury</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none">Boutique</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none">All-Inclusive</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h6 class="fw-bold">Stay Updated</h6>
+                <p class="small text-secondary">Join our community for exclusive deals and travel inspiration.</p>
+                <div class="d-flex">
+                    <input type="email" class="form-control form-control-sm" placeholder="Email address">
+                    <button class="btn btn-primary btn-sm ms-2"><i class="bi bi-send"></i></button>
+                </div>
+            </div>
+        </div>
+        <hr class="border-secondary mt-4">
+        <p class="text-center small text-secondary mb-0">© 2026 WanderNest. All rights reserved.</p>
+    </div>
+</footer>
+
+
 </body>
 </html>

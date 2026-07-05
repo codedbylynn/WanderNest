@@ -40,5 +40,208 @@
     </div>
 </nav>
 
+{% load static %}
+
+<!-- ===== HERO ===== -->
+<section class="position-relative">
+    <div class="position-relative" style="height: 420px; overflow: hidden;">
+        <img src="https://placehold.co/1600x420?text=Amalfi+Coast+Sunset" class="w-100 h-100" style="object-fit: cover;" alt="Amalfi Coast at sunset">
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.35);"></div>
+        <div class="position-absolute top-50 start-50 translate-middle text-white text-center px-3" style="max-width: 700px;">
+            <h1 class="display-4 fw-bold">Connect With Us</h1>
+            <p class="lead">Our global network of travel curators is ready to design your next extraordinary escape. Let's start the conversation.</p>
+        </div>
+        <div class="position-absolute bottom-0 start-0 m-3 d-flex gap-2">
+            <a href="#" class="btn btn-light btn-sm rounded-circle"><i class="bi bi-share"></i></a>
+            <a href="#" class="btn btn-light btn-sm rounded-circle"><i class="bi bi-globe"></i></a>
+            <a href="#" class="btn btn-light btn-sm rounded-circle"><i class="bi bi-heart"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== GET IN TOUCH + FORM ===== -->
+<section class="container py-5">
+    <div class="row g-5">
+
+        <!-- Left: contact info -->
+        <div class="col-lg-5">
+            <h2 class="fw-bold text-primary">Get in Touch</h2>
+            <p class="text-muted mb-4">Reach out to our specialist teams for bespoke itineraries, corporate retreats, or general inquiries about our boutique hotel portfolio.</p>
+
+            <div class="d-flex gap-3 mb-4">
+                <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width:44px; height:44px;">
+                    <i class="bi bi-geo-alt text-primary"></i>
+                </div>
+                <div>
+                    <h6 class="fw-bold mb-1">Our Headquarters</h6>
+                    <p class="small text-muted mb-0">128 Luxury Avenue, Suite 400<br>Chelsea, London SW3 4LY</p>
+                </div>
+            </div>
+
+            <div class="d-flex gap-3 mb-4">
+                <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width:44px; height:44px;">
+                    <i class="bi bi-telephone text-primary"></i>
+                </div>
+                <div>
+                    <h6 class="fw-bold mb-1">Global Reservations</h6>
+                    <p class="small text-muted mb-0">+44 (0) 20 7946 0123<br>Available 24/7 for Members</p>
+                </div>
+            </div>
+
+            <div class="d-flex gap-3 mb-4">
+                <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width:44px; height:44px;">
+                    <i class="bi bi-envelope text-primary"></i>
+                </div>
+                <div>
+                    <h6 class="fw-bold mb-1">Inquiries</h6>
+                    <p class="small text-muted mb-0">concierge@wandernest.com<br>press@wandernest.com</p>
+                </div>
+            </div>
+
+            <div class="d-flex gap-3 mb-4">
+                <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width:44px; height:44px;">
+                    <i class="bi bi-clock text-primary"></i>
+                </div>
+                <div>
+                    <h6 class="fw-bold mb-1">Office Hours</h6>
+                    <p class="small text-muted mb-0">Mon - Fri: 09:00 - 18:00 GMT<br>Sat: 10:00 - 14:00 GMT</p>
+                </div>
+            </div>
+
+            <!-- Map placeholder -->
+            <div class="rounded-4 overflow-hidden border" style="height: 260px;">
+                <iframe
+                    src="https://www.google.com/maps?q=Chelsea,London&output=embed"
+                    width="100%" height="100%" style="border:0;" loading="lazy"
+                    title="WanderNest HQ location map">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Right: inquiry form -->
+        <div class="col-lg-7">
+            <div class="bg-white rounded-4 shadow-sm p-4 p-md-5">
+                <h3 class="fw-bold">Inquiry Form</h3>
+                <p class="text-muted mb-4">Please share some details about your travel aspirations.</p>
+
+                <form>
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Johnathan Doe">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold">Email Address</label>
+                            <input type="email" class="form-control" placeholder="john@example.com">
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold">Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="+1 (555) 000-0000">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold">Preferred Destination</label>
+                            <select class="form-select">
+                                <option selected>Select a region</option>
+                                <option>Europe</option>
+                                <option>Asia</option>
+                                <option>Africa</option>
+                                <option>Americas</option>
+                                <option>Oceania</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-semibold">Message</label>
+                        <textarea class="form-control" rows="4" placeholder="Tell us about your dream trip..."></textarea>
+                    </div>
+
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" id="privacyCheck">
+                        <label class="form-check-label small text-muted" for="privacyCheck">
+                            I agree to the privacy policy and data processing terms.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 py-3 rounded-3 fw-semibold">Send Inquiry</button>
+                </form>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 mt-4 flex-wrap">
+                <span class="small text-muted text-uppercase" style="letter-spacing:1px;">Recommended By</span>
+                <span class="fw-bold text-muted">VOGUE</span>
+                <span class="fw-bold text-muted">TRAVELER</span>
+                <span class="fw-bold text-muted">FORBES</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== NEWSLETTER CTA ===== -->
+<section class="container pb-5">
+    <div class="bg-primary rounded-4 p-4 p-md-5 text-white d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <div style="max-width: 480px;">
+            <h4 class="fw-bold mb-2">The Wanderer's Journal</h4>
+            <p class="mb-0 small">Subscribe to our monthly editorial featuring secret destinations, member-only perks, and design-led travel stories.</p>
+        </div>
+        <form class="d-flex gap-2 flex-wrap">
+            <input type="email" class="form-control rounded-pill px-3" placeholder="Your email address" style="min-width:220px;">
+            <button type="submit" class="btn btn-light rounded-pill px-4 fw-semibold">Join Now</button>
+        </form>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-dark text-light pt-5 pb-3">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <h5 class="fw-bold">WanderNest</h5>
+                <p class="small text-secondary">Redefining the art of discovery through curated luxury experiences and boutique hospitality across the globe.</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-light"><i class="bi bi-share"></i></a>
+                    <a href="#" class="text-light"><i class="bi bi-globe"></i></a>
+                    <a href="#" class="text-light"><i class="bi bi-heart"></i></a>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <h6 class="fw-bold text-uppercase small" style="letter-spacing:1px;">Destinations</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="#" class="text-secondary text-decoration-none">Mediterranean</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none">Southeast Asia</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none">Nordic Escape</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none">South America</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h6 class="fw-bold text-uppercase small" style="letter-spacing:1px;">Experience</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="#" class="text-secondary text-decoration-none">Adventure</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none">Luxury</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none">Boutique</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none">All-Inclusive</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h6 class="fw-bold text-uppercase small" style="letter-spacing:1px;">Connect</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="{% url 'about' %}" class="text-secondary text-decoration-none">About</a></li>
+                    <li><a href="{% url 'contact' %}" class="text-light text-decoration-none fw-semibold">Contact</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none">Support</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="border-secondary mt-4">
+        <div class="d-flex justify-content-between flex-wrap small text-secondary">
+            <span>© 2026 WanderNest. All rights reserved.</span>
+            <span>Designed for extraordinary journeys.</span>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
