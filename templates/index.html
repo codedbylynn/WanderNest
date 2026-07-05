@@ -19,7 +19,7 @@
    <!-- Copy and paste this at the top of home.html -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top py-3 border-bottom border-light">
     <div class="container">
-        <a class="navbar-brand fw-bold text-primary fs-4" href="{% static 'templates/home.html' %}" style="letter-spacing: -0.5px;">WanderNest</a>
+        <a class="navbar-brand fw-bold text-primary fs-4" href="{% url 'home' %}" style="letter-spacing: -0.5px;">WanderNest</a>
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,11 +27,11 @@
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold">
                 <li class="nav-item px-2">
                     <!-- ACTIVE LINK -->
-                    <a class="nav-link active text-primary border-bottom border-primary border-2 pb-1" href="{% static 'templates/home.html' %}">Home</a>
+                    <a class="nav-link active text-primary border-bottom border-primary border-2 pb-1" href="{% url 'home' %}">Home</a>
                 </li>
-                <li class="nav-item px-2"><a class="nav-link text-secondary" href="{% static 'templates/destinations.html' %}">Destinations</a></li>
-                <li class="nav-item px-2"><a class="nav-link text-secondary" href="{% static 'templates/about.html' %}">About</a></li>
-                <li class="nav-item px-2"><a class="nav-link text-secondary" href="{% static 'templates/contact.html' %}">Contact</a></li>
+                <li class="nav-item px-2"><a class="nav-link text-secondary" href="{% url 'destinations' %}">Destinations</a></li>
+                <li class="nav-item px-2"><a class="nav-link text-secondary" href="{% url 'about' %}">About</a></li>
+                <li class="nav-item px-2"><a class="nav-link text-secondary" href="{% url 'contact' %}">Contact</a></li>
             </ul>
             <div class="d-flex align-items-center gap-4">
                 <a href="#" class="text-secondary link-primary">
@@ -41,6 +41,375 @@
             </div> 
     </div>
 </nav>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="position-relative">
+    <div class="position-relative" style="height: 500px; overflow: hidden; border-radius: 0 0 24px 24px;">
+        <img src="{% static 'images/herosection-home.png' %}" class="w-100 h-100" style="object-fit: cover;" alt="Mountain and sea view">
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 60%);"></div>
+        <div class="position-absolute top-50 start-0 translate-middle-y text-white ps-4 ps-md-5" style="max-width: 500px;">
+            <h1 class="display-5 fw-bold">Travel Beyond Expectations</h1>
+            <p class="lead">Curating bespoke journeys to the world's most breathtaking destinations. Discover luxury, adventure, and serenity in one seamless experience.</p>
+            <div class="d-flex gap-3 mt-4">
+                <a href="{% url 'destinations' %}" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold">Explore Destinations</a>
+                <a href="#" class="btn btn-outline-light rounded-pill px-4 py-2 fw-semibold">Start Planning</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Discover Your Next Escape strip -->
+    <div class="container">
+        <div class="bg-white shadow rounded-4 p-3 d-flex justify-content-between align-items-center flex-wrap" style="margin-top: -40px; position: relative; z-index: 2;">
+            <span class="fw-semibold text-muted d-none d-md-block">Discover Your Next Escape</span>
+            <div class="d-flex gap-3 align-items-center flex-wrap">
+                <span class="text-secondary small">Amalfi Coast</span>
+                <span class="text-secondary small">Maldives</span>
+                <span class="text-secondary small">Swiss Alps</span>
+                <a href="{% url 'destinations' %}" class="btn btn-primary btn-sm rounded-pill px-3">Explore Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== POPULAR DESTINATIONS ===== -->
+<section class="container py-5 mt-4">
+    <p class="text-primary fw-semibold text-uppercase small mb-1">Inspiration</p>
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
+        <h2 class="fw-bold mb-0">Popular Destinations</h2>
+        <a href="{% url 'destinations' %}" class="text-primary text-decoration-none fw-semibold">View all destinations &rarr;</a>
+    </div>
+
+    <div class="row g-4">
+        {% comment %} Replace placeholder image URLs below with your own photos in static/images/ {% endcomment %}
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="{% static 'images/luxury.png' %}"class="card-img-top" style="height:220px; object-fit:cover;" alt="Santorini, Greece">
+                    <span class="badge bg-white text-dark position-absolute top-0 start-0 m-2">Luxury</span>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <h5 class="card-title fw-bold">Santorini, Greece</h5>
+                        <span class="text-primary fw-bold">From $1,299</span>
+                    </div>
+                    <p class="small text-muted mb-0">★ 4.9 (1.2k reviews)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="{% static 'images/wellness.png' %}" class="card-img-top" style="height:220px; object-fit:cover;" alt="Bali, Indonesia">
+                    <span class="badge bg-white text-dark position-absolute top-0 start-0 m-2">Wellness</span>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <h5 class="card-title fw-bold">Bali, Indonesia</h5>
+                        <span class="text-primary fw-bold">From $850</span>
+                    </div>
+                    <p class="small text-muted mb-0">★ 4.8 (950 reviews)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="{% static 'images/adventure.png' %}" class="card-img-top" style="height:220px; object-fit:cover;" alt="Swiss Alps, Switzerland">
+                    <span class="badge bg-white text-dark position-absolute top-0 start-0 m-2">Adventure</span>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <h5 class="card-title fw-bold">Swiss Alps, Switzerland</h5>
+                        <span class="text-primary fw-bold">From $2,100</span>
+                    </div>
+                    <p class="small text-muted mb-0">★ 4.9 (720 reviews)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="{% static 'images/culture.png' %}" class="card-img-top" style="height:220px; object-fit:cover;" alt="Cape Town, South Africa">
+                    <span class="badge bg-white text-dark position-absolute top-0 start-0 m-2">Culture</span>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <h5 class="card-title fw-bold">Cape Town, SA</h5>
+                        <span class="text-primary fw-bold">From $1,550</span>
+                    </div>
+                    <p class="small text-muted mb-0">★ 4.7 (840 reviews)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                     <img src="{% static 'images/heritage.png' %}" class="card-img-top" style="height:220px; object-fit:cover;" alt="Kyoto, Japan">
+                    <span class="badge bg-white text-dark position-absolute top-0 start-0 m-2">Heritage</span>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <h5 class="card-title fw-bold">Kyoto, Japan</h5>
+                        <span class="text-primary fw-bold">From $1,800</span>
+                    </div>
+                    <p class="small text-muted mb-0">★ 4.9 (2.1k reviews)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+    <div class="card border-0 shadow-sm h-100">
+        <div class="position-relative">
+            <img src="{% static 'images/maldives.png' %}" class="card-img-top" style="height:220px; object-fit:cover;" alt="Maldives">
+            <span class="badge bg-white text-dark position-absolute top-0 start-0 m-2">Romance</span>
+        </div>
+        <div class="card-body">
+            <div class="d-flex justify-content-between">
+                <h5 class="card-title fw-bold">Maldives</h5>
+                <span class="text-primary fw-bold">From $2,450</span>
+            </div>
+            <p class="small text-muted mb-0">★ 5.0 (3.4k reviews)</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="py-5" style="background-color: #eef1fb;">
+    <div class="container text-center">
+        <h2 class="fw-bold">Why Choose WanderNest?</h2>
+        <p class="text-muted mx-auto mb-5" style="max-width: 550px;">We redefine the travel experience through meticulous planning and a passion for discovery.</p>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="bg-white rounded-4 p-4 h-100 shadow-sm">
+                    <div class="fs-2 mb-2">💰</div>
+                    <h6 class="fw-bold">Best Price Guarantee</h6>
+                    <p class="small text-muted mb-0">We match or beat any price for the same quality and itinerary, ensuring value for your investment.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="bg-white rounded-4 p-4 h-100 shadow-sm">
+                    <div class="fs-2 mb-2">✅</div>
+                    <h6 class="fw-bold">Verified Hotels Only</h6>
+                    <p class="small text-muted mb-0">Every accommodation is hand-picked and regularly inspected to meet our strict luxury standards.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="bg-white rounded-4 p-4 h-100 shadow-sm">
+                    <div class="fs-2 mb-2">🎧</div>
+                    <h6 class="fw-bold">24/7 Global Support</h6>
+                    <p class="small text-muted mb-0">Our dedicated concierge team is available around the clock to assist you, anywhere in the world.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="bg-white rounded-4 p-4 h-100 shadow-sm">
+                    <div class="fs-2 mb-2">🔒</div>
+                    <h6 class="fw-bold">Safe &amp; Secure Payments</h6>
+                    <p class="small text-muted mb-0">Multiple layers of encryption and global standards keep your financial data and transactions private.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CURATED EXPERIENCES ===== -->
+<section class="container py-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Curated Experiences</h2>
+        <p class="text-muted">All-inclusive packages designed for the discerning traveler.</p>
+    </div>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="{% static 'images/adventure.png' %}" class="card-img-top" style="height:200px; object-fit:cover;" alt="African Safari Expedition">
+                    <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-2">Popular</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold">African Safari Expedition</h5>
+                    <p class="small text-muted">Experience the raw beauty of the Savannah with private guides and 5-star lodging.</p>
+                    <ul class="list-unstyled small text-muted">
+                        <li>✔ Private Game Drives</li>
+                        <li>✔ Luxury Tent Accommodation</li>
+                        <li>✔ All Gourmet Meals Included</li>
+                    </ul>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div>
+                            <span class="fw-bold text-primary">$4,599</span><br>
+                            <span class="small text-muted">7 Days / 6 Nights</span>
+                        </div>
+                        <a href="#" class="btn btn-primary rounded-pill btn-sm px-3">Book Package</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="{% static 'images/featured.png' %}" class="card-img-top" style="height:200px; object-fit:cover;" alt="Amalfi Coast Yacht Tour">
+                    <span class="badge bg-primary position-absolute top-0 end-0 m-2">Featured</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold">Amalfi Coast Yacht Tour</h5>
+                    <p class="small text-muted">Sail across the azure waters of Italy's most scenic coastline on a private chartered yacht.</p>
+                    <ul class="list-unstyled small text-muted">
+                        <li>✔ Personal Skipper &amp; Crew</li>
+                        <li>✔ Port Access in Capri &amp; Positano</li>
+                        <li>✔ Wine Tasting at Shoreline Vineyards</li>
+                    </ul>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div>
+                            <span class="fw-bold text-primary">$6,200</span><br>
+                            <span class="small text-muted">5 Days / 4 Nights</span>
+                        </div>
+                        <a href="#" class="btn btn-primary rounded-pill btn-sm px-3">Book Package</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="{% static 'images/unique.png' %}" class="card-img-top" style="height:200px; object-fit:cover;" alt="Icelandic Aurora Retreat">
+                    <span class="badge bg-success position-absolute top-0 end-0 m-2">Unique</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="fw-bold">Icelandic Aurora Retreat</h5>
+                    <p class="small text-muted">Witness the celestial dance of the Northern Lights from a custom-designed glass igloo.</p>
+                    <ul class="list-unstyled small text-muted">
+                        <li>✔ Northern Lights Guaranteed Tour</li>
+                        <li>✔ Blue Lagoon Thermal Spa Entry</li>
+                        <li>✔ Glacier Hiking with Pro Guides</li>
+                    </ul>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div>
+                            <span class="fw-bold text-primary">$3,850</span><br>
+                            <span class="small text-muted">4 Days / 3 Nights</span>
+                        </div>
+                        <a href="#" class="btn btn-primary rounded-pill btn-sm px-3">Book Package</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== MOMENTS CAPTURED (gallery) ===== -->
+<section class="container py-5">
+    <h2 class="fw-bold">Moments Captured</h2>
+    <p class="text-muted mb-4">Shared by our global community of wanderers.</p>
+    <div class="row g-3">
+        <div class="col-6 col-md-3">
+            <img src="https://placehold.co/400x500?text=Market" class="img-fluid rounded-4 w-100 h-100" style="object-fit:cover;" alt="Local market">
+        </div>
+        <div class="col-6 col-md-6">
+            <img src="https://placehold.co/800x350?text=Mountains" class="img-fluid rounded-4 w-100 mb-3" style="object-fit:cover; height:220px;" alt="Mountain lake">
+            <img src="https://placehold.co/400x300?text=Beach" class="img-fluid rounded-4 w-100" style="object-fit:cover; height:180px;" alt="Tropical beach">
+        </div>
+        <div class="col-6 col-md-3">
+            <img src="https://placehold.co/400x500?text=Lion" class="img-fluid rounded-4 w-100 h-100" style="object-fit:cover;" alt="Lion in savannah">
+        </div>
+    </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="py-5" style="background-color: #eef1fb;">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5">Trusted by Travelers</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="bg-white rounded-4 p-4 h-100 shadow-sm">
+                    <p class="text-warning mb-2">★★★★★</p>
+                    <p class="fst-italic text-muted">"WanderNest transformed our honeymoon into a fairy tale. The attention to detail in Santorini was beyond anything we've experienced."</p>
+                    <p class="fw-bold mb-0">Elena Rodriguez</p>
+                    <p class="small text-muted">Marketing Director</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bg-white rounded-4 p-4 h-100 shadow-sm">
+                    <p class="text-warning mb-2">★★★★★</p>
+                    <p class="fst-italic text-muted">"The 24/7 support was a lifesaver when our flight was delayed in Tokyo. They rebooked everything seamlessly before we even landed."</p>
+                    <p class="fw-bold mb-0">Julian Vane</p>
+                    <p class="small text-muted">Entrepreneur</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bg-white rounded-4 p-4 h-100 shadow-sm">
+                    <p class="text-warning mb-2">★★★★★</p>
+                    <p class="fst-italic text-muted">"Finally, a travel site that understands luxury doesn't just mean expensive, it means curated and personal. Bali was perfection."</p>
+                    <p class="fw-bold mb-0">Sarah Chen</p>
+                    <p class="small text-muted">Architect</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== NEWSLETTER CTA ===== -->
+<section class="container py-5">
+    <div class="bg-primary rounded-4 p-5 text-white d-flex justify-content-between align-items-center flex-wrap">
+        <div style="max-width: 500px;">
+            <h3 class="fw-bold">Join the Inner Circle</h3>
+            <p class="mb-3">Subscribe for exclusive early access to luxury deals, travel tips, and hidden gems around the world.</p>
+            <form class="d-flex gap-2 flex-wrap">
+                <input type="email" class="form-control rounded-pill px-3" placeholder="Enter your email" style="max-width: 280px;">
+                <button type="submit" class="btn btn-light rounded-pill px-4 fw-semibold">Subscribe</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-dark text-light pt-5 pb-3 mt-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <h5 class="fw-bold">WanderNest</h5>
+                <p class="small text-secondary">Premium travel experiences tailored to your dreams. Discover the world with elegance and ease.</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-light">📘</a>
+                    <a href="#" class="text-light">📷</a>
+                    <a href="#" class="text-light">✉️</a>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <h6 class="fw-bold">Quick Links</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="{% url 'home' %}" class="text-secondary text-decoration-none">Home</a></li>
+                    <li><a href="{% url 'destinations' %}" class="text-secondary text-decoration-none">Destinations</a></li>
+                    <li><a href="{% url 'about' %}" class="text-secondary text-decoration-none">About Us</a></li>
+                    <li><a href="{% url 'contact' %}" class="text-secondary text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h6 class="fw-bold">Categories</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="#" class="text-secondary text-decoration-none">Adventure Travel</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none">Luxury Escapes</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none">Boutique Stays</a></li>
+                    <li><a href="#" class="text-secondary text-decoration-none">All-Inclusive</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h6 class="fw-bold">Newsletter</h6>
+                <p class="small text-secondary">Stay updated with our latest offers and travel inspiration.</p>
+                <input type="email" class="form-control form-control-sm" placeholder="Email address">
+            </div>
+        </div>
+        <hr class="border-secondary mt-4">
+        <p class="text-center small text-secondary mb-0">© 2026 WanderNest. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
 
 </body>
 </html>

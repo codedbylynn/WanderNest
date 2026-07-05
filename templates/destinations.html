@@ -16,19 +16,19 @@
   <!-- Copy and paste this at the top of destinations.html -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top py-3 border-bottom border-light">
     <div class="container">
-        <a class="navbar-brand fw-bold text-primary fs-4" href="home.html" style="letter-spacing: -0.5px;">WanderNest</a>
+        <a class="navbar-brand fw-bold text-primary fs-4" href="{% url 'home' %}" style="letter-spacing: -0.5px;">WanderNest</a>
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold">
-                <li class="nav-item px-2"><a class="nav-link text-secondary" href="{% static 'templates/home.html' %}">Home</a></li>
+                <li class="nav-item px-2"><a class="nav-link text-secondary" href="{% url 'home' %}">Home</a></li>
                 <li class="nav-item px-2">
                     <!-- ACTIVE LINK -->
-                    <a class="nav-link active text-primary border-bottom border-primary border-2 pb-1" href="{% static 'templates/destinations.html' %}">Destinations</a>
+                    <a class="nav-link active text-primary border-bottom border-primary border-2 pb-1" href="{% url 'destinations' %}">Destinations</a>
                 </li>
-                <li class="nav-item px-2"><a class="nav-link text-secondary" href="{% static 'templates/about.html' %}">About</a></li>
-                <li class="nav-item px-2"><a class="nav-link text-secondary" href="{% static 'templates/contact.html' %}">Contact</a></li>
+                <li class="nav-item px-2"><a class="nav-link text-secondary" href="{% url 'about' %}">About</a></li>
+                <li class="nav-item px-2"><a class="nav-link text-secondary" href="{% url 'contact' %}">Contact</a></li>
             </ul>
             <div class="d-flex align-items-center gap-4">
                 <a href="#" class="text-secondary link-primary">
