@@ -85,12 +85,12 @@
 <section class="container py-5">
     <div class="row g-4">
 
-        {% comment %} Reusable card structure repeated for each destination. Swap placehold.co URLs for your own photos in static/images/ {% endcomment %}
+       
 
         <div class="col-md-4">
             <div class="card border-0 shadow-sm h-100">
                 <div class="position-relative">
-                    <img src="https://placehold.co/500x350?text=Ari+Atoll" class="card-img-top" style="height:220px; object-fit:cover;" alt="Ari Atoll Resort, Maldives">
+                    <img src="{% static 'images/ariatoll.png' %}" class="card-img-top" style="height:220px; object-fit:cover;" alt="Ari Atoll Resort, Maldives">
                     <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.9</span>
                 </div>
                 <div class="card-body">
@@ -111,7 +111,7 @@
         <div class="col-md-4">
             <div class="card border-0 shadow-sm h-100">
                 <div class="position-relative">
-                    <img src="https://placehold.co/500x350?text=Zermatt" class="card-img-top" style="height:220px; object-fit:cover;" alt="Zermatt Lodge, Switzerland">
+                    <img src="{% static 'images/zermatt.png' %}" class="card-img-top" style="height:220px; object-fit:cover;" alt="Zermatt Lodge, Switzerland">
                     <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.8</span>
                 </div>
                 <div class="card-body">
@@ -132,7 +132,7 @@
         <div class="col-md-4">
             <div class="card border-0 shadow-sm h-100">
                 <div class="position-relative">
-                    <img src="https://placehold.co/500x350?text=Kyoto" class="card-img-top" style="height:220px; object-fit:cover;" alt="Kyoto Heritage, Japan">
+                    <img src="{% static 'images/kyoto.png' %}" class="card-img-top" style="height:220px; object-fit:cover;" alt="Kyoto Heritage, Japan">
                     <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.9</span>
                 </div>
                 <div class="card-body">
@@ -153,7 +153,7 @@
         <div class="col-md-4">
             <div class="card border-0 shadow-sm h-100">
                 <div class="position-relative">
-                    <img src="https://placehold.co/500x350?text=Serengeti" class="card-img-top" style="height:220px; object-fit:cover;" alt="Serengeti Plains, Tanzania">
+                    <img src="{% static 'images/serengeti.png' %}" class="card-img-top" style="height:220px; object-fit:cover;" alt="Serengeti Plains, Tanzania">
                     <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.7</span>
                 </div>
                 <div class="card-body">
@@ -174,7 +174,7 @@
         <div class="col-md-4">
             <div class="card border-0 shadow-sm h-100">
                 <div class="position-relative">
-                    <img src="https://placehold.co/500x350?text=Amalfi" class="card-img-top" style="height:220px; object-fit:cover;" alt="Amalfi Coast, Italy">
+                    <img src="{% static 'images/amalfi.png' %}" class="card-img-top" style="height:220px; object-fit:cover;" alt="Amalfi Coast, Italy">
                     <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.9</span>
                 </div>
                 <div class="card-body">
@@ -195,7 +195,7 @@
         <div class="col-md-4">
             <div class="card border-0 shadow-sm h-100">
                 <div class="position-relative">
-                    <img src="https://placehold.co/500x350?text=Machu+Picchu" class="card-img-top" style="height:220px; object-fit:cover;" alt="Machu Picchu, Peru">
+                    <img src="{% static 'images/machu.png' %}" class="card-img-top" style="height:220px; object-fit:cover;" alt="Machu Picchu, Peru">
                     <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.8</span>
                 </div>
                 <div class="card-body">
@@ -216,7 +216,7 @@
         <div class="col-md-4">
             <div class="card border-0 shadow-sm h-100">
                 <div class="position-relative">
-                    <img src="https://placehold.co/500x350?text=Banff" class="card-img-top" style="height:220px; object-fit:cover;" alt="Banff Retreat, Canada">
+                    <img src="{% static 'images/banff.png' %}" class="card-img-top" style="height:220px; object-fit:cover;" alt="Banff Retreat, Canada">
                     <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.9</span>
                 </div>
                 <div class="card-body">
@@ -237,7 +237,7 @@
         <div class="col-md-4">
             <div class="card border-0 shadow-sm h-100">
                 <div class="position-relative">
-                    <img src="https://placehold.co/500x350?text=Santorini" class="card-img-top" style="height:220px; object-fit:cover;" alt="Santorini Villas, Greece">
+                    <img src="{% static 'images/santorini.png' %}" class="card-img-top" style="height:220px; object-fit:cover;" alt="Santorini Villas, Greece">
                     <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.9</span>
                 </div>
                 <div class="card-body">
@@ -258,7 +258,7 @@
         <div class="col-md-4">
             <div class="card border-0 shadow-sm h-100">
                 <div class="position-relative">
-                    <img src="https://placehold.co/500x350?text=Wadi+Rum" class="card-img-top" style="height:220px; object-fit:cover;" alt="Wadi Rum Glamping, Jordan">
+                    <img src="{% static 'images/wadi.png' %}" class="card-img-top" style="height:220px; object-fit:cover;" alt="Wadi Rum Glamping, Jordan">
                     <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.6</span>
                 </div>
                 <div class="card-body">
@@ -279,7 +279,7 @@
         <div class="col-md-4">
             <div class="card border-0 shadow-sm h-100">
                 <div class="position-relative">
-                    <img src="https://placehold.co/500x350?text=Lapland" class="card-img-top" style="height:220px; object-fit:cover;" alt="Lapland Igloos, Finland">
+                    <img src="{% static 'images/laplad.png' %}" class="card-img-top" style="height:220px; object-fit:cover;" alt="Lapland Igloos, Finland">
                     <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.8</span>
                 </div>
                 <div class="card-body">
@@ -300,7 +300,7 @@
         <div class="col-md-4">
             <div class="card border-0 shadow-sm h-100">
                 <div class="position-relative">
-                    <img src="https://placehold.co/500x350?text=Ubud" class="card-img-top" style="height:220px; object-fit:cover;" alt="Ubud Sanctuary, Indonesia">
+                    <img src="{% static 'images/ubud.png' %}" class="card-img-top" style="height:220px; object-fit:cover;" alt="Ubud Sanctuary, Indonesia">
                     <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.7</span>
                 </div>
                 <div class="card-body">
@@ -321,7 +321,7 @@
         <div class="col-md-4">
             <div class="card border-0 shadow-sm h-100">
                 <div class="position-relative">
-                    <img src="https://placehold.co/500x350?text=Sydney" class="card-img-top" style="height:220px; object-fit:cover;" alt="Sydney Harbour, Australia">
+                    <img src="{% static 'images/sydney.png' %}" class="card-img-top" style="height:220px; object-fit:cover;" alt="Sydney Harbour, Australia">
                     <span class="badge bg-white text-dark position-absolute top-0 end-0 m-2"><i class="bi bi-star-fill text-warning"></i> 4.8</span>
                 </div>
                 <div class="card-body">
